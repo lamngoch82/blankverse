@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "blankverse_backend": {
+      "main": "src/blankverse_backend/main.mo",
+      "type": "motoko"
+    },
+    "blankverse_frontend": {
+      "dependencies": ["blankverse_backend"],
+      "source": ["src/blankverse_frontend/dist"],
+      "type": "assets",
+      "workspace": "blankverse_frontend"
+    },
+    "signalling": {
+      "main": "src/signalling/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
